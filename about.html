@@ -13,23 +13,52 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">
-                Dev's Portfolio
-            </div>
-            <div class="right">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
-                </ul>
-                
-                <div class="resume"><button class="resume-button">Resume</button></div>
-            </div>
-        </nav>
-    </header>
+    <div id="app">
+        <header class="header">
+            <a href="/">Dev's Portfolio</a>
+            <nav>
+                <div class="container">
+                    <ul>
+                        <li><a href="/home.html">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/projects.html">Projects</a></li>
+                        <li><a href="/contact.html">Contact Me</a></li>
+                    </ul>
+
+                    <div class="resume"><button class="resume-button">Resume</button></div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <aside>
+                <div class="hero-avatar">
+                    <picture class="hero-avatar_image">
+                        <img src="dr.png" alt="me" width="140" loading="lazy">
+                    </picture>
+                </div>
+            </aside>
+            <main class="main-content">
+                <article class="about-content">
+                    <h1 class="about-content-headline">About me</h1>
+                    <p>👋 Hey! How are you?</p>
+                    <p> I'm Dev. I'm a
+                        <strong>Web Developer</strong>
+                        with a passion for learning and creating new things.
+                        My main focus is on building websites using
+                        <strong>HTML5, CSS3, JavaScript, ReactJS</strong>
+                    </p>
+                    <p>
+                        I don't have favourites but i like to design websites and also like to do Machine Learning
+                    </p>
+                    <p>
+                        I'm into computers, ui design, games and anime and my favourite
+                        <strong>Football</strong>
+                    </p>
+                    <div class="social-media-icons"></div>
+                </article>
+            </main>
+        </div>
+    </div>
 </body>
 
 </html>
