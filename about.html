@@ -9,23 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 
 <body>
     <div id="app">
         <header class="header">
-            <a href="/">Dev's Portfolio</a>
+            <a href="/" class="logo">Dev's Portfolio</a>
             <nav>
                 <div class="container">
-                    <ul>
-                        <li><a href="/home.html">Home</a></li>
-                        <li><a href="/about.html">About</a></li>
-                        <li><a href="/projects.html">Projects</a></li>
-                        <li><a href="/contact.html">Contact Me</a></li>
-                    </ul>
+                    <div class="ul">
+                        <button class="btn" onclick="location.href = 'home.html'">Home</button>
+                        <button class="btn" onclick="location.href = 'about.html'">About</button>
+                        <button class="btn" onclick="location.href = 'projects.html'">Projects</button>
+                        <button class="btn" onclick="location.href = 'contact.html'">Contact Me</button>
+                    </div>
 
-                    <div class="resume"><button class="resume-button">Resume</button></div>
+                    <div class="resume"><button class="resume-button" onclick="location.href='/resume/Resume.pdf'">Resume</button></div>
                 </div>
             </nav>
         </header>
@@ -36,6 +36,15 @@
                         <img src="dr.png" alt="me" width="140" loading="lazy">
                     </picture>
                 </div>
+                <svg height="170" width="200" class="binary">
+                    <text x="10" y="20" style="fill:currentColor;">
+                        <tspan x="10" y="45">0 1 1 0 1 0 0 0</tspan>
+                        <tspan x="10" y="75">0 1 1 0 0 1 0 1</tspan>
+                        <tspan x="10" y="105">0 1 1 0 1 0 1 1</tspan>
+                        <tspan x="10" y="135">0 1 1 0 1 1 0 0</tspan>
+                        <tspan x="10" y="165">0 1 1 0 1 1 1 1</tspan>
+                    </text>
+                </svg>
             </aside>
             <main class="main-content">
                 <article class="about-content">
@@ -54,10 +63,35 @@
                         I'm into computers, ui design, games and anime and my favourite
                         <strong>Football</strong>
                     </p>
-                    <div class="social-media-icons"></div>
+                    <br>
+                    <div class="content">
+                        <h1>Skills</h1>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>ReactJS</li>
+                            <li>GitHub</li>
+                            <li>Figma</li>
+                        </ul>
+                        <br>
+                        <h1>Frameworks</h1>
+                        <ul>
+                            <li><a href="https://getbootstrap.com/"></a> Bootstrap</li>
+                            <li><a href="https://mui.com/material-ui/"></a> Material UI</li>
+                            <li><a href="https://tailwindcss.com/"></a> Tailwind CSS</li>
+                            <li><a href="https://www.gatsbyjs.com/"></a> Gatsby JS</li>
+                        </ul>
+                    </div>
+                    <div class="social-media-icons">
+
+                    </div>
                 </article>
             </main>
         </div>
+        <footer>
+            <span>&copy; 2021 Dev | All rights reserved.</span>
+        </footer>
     </div>
 </body>
 

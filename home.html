@@ -9,27 +9,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">
-                Dev's Portfolio
-            </div>
-            <div class="right">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
-                </ul>
-                
-                <div class="resume"><button class="resume-button">Resume</button></div>
-            </div>
-        </nav>
-    </header>
+    <div id="app">
+        <header class="header">
+            <a href="/" class="logo">Dev's Portfolio</a>
+            <nav>
+                <div class="container">
+                    <div class="ul">
+                        <button class="btn" onclick="location.href = 'home.html'">Home</button>
+                        <button class="btn" onclick="location.href = 'about.html'">About</button>
+                        <button class="btn" onclick="location.href = 'projects.html'">Projects</button>
+                        <button class="btn" onclick="location.href = 'contact.html'">Contact Me</button>
+                    </div>
+
+                    <div class="resume"><button class="resume-button" onclick="location.href='/resume/Resume.pdf'">Resume</button></div>
+                </div>
+            </nav>
+        </header>
+    </div>
 </body>
 
 </html>
