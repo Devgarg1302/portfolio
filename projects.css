@@ -201,3 +201,125 @@ nav .ul button {
     display: flex;
     padding: 6rem 0;
 }
+
+.back{
+display: flex;
+width: 100%;
+height: 65px;
+background: transparent;
+}
+
+.projects{
+    background-color: #23262a;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .23);
+}
+
+.container1{
+    --max-w: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: calc(2rem + 1vw)0;
+    width: calc(100% - 2rem);
+    max-width: var(--max-w);
+    display: flex;
+    flex-flow: column wrap;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+}
+
+.hero_headline{
+    font-size: 2.25rem;
+}
+
+.hero_description{
+    font-size: 1.125rem;
+    max-width: 800px;
+    opacity: .7;
+}
+
+.collection{
+    --max-w: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: calc(2rem + 1vw)0;
+    width: calc(100% - 2rem);
+    max-width: var(--max-w);
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0;
+    flex-flow: row wrap;
+}
+
+.card {
+    --font-color: #ffff;
+    --bg-color: #23262a;
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+    background: var(--bg-color);
+    box-shadow: -9px 9px 18px #464a4f,
+                9px -9px 18px #323232;
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 0px 10px 2px #464a4f;
+  }
+  
+  .card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    background-color: #1abbd1;
+  }
+  
+  .card__descr-wrapper {
+    padding: 15px;
+    display: grid;
+  }
+  
+  .card__title {
+    color: var(--font-color);
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  .card__descr {
+    color: var(--font-color);
+    opacity: .8;
+  }
+  
+  .svg {
+    width: 25px;
+    height: 25px;
+    transform: translateY(25%);
+    fill: var(--font-color);
+  }
+  
+  .card__links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+  }
+  
+  .card__links .link {
+    color: var(--font-color);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  
+  .card__links .link:hover {
+    text-decoration: underline;
+  }
+  
