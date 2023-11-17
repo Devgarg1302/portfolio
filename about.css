@@ -358,7 +358,7 @@ main{
 }
 
 article>*+*{
-    margin-top:1em;
+    margin-top: 1em;
 }
 
 .content .about-content_headline{
@@ -433,9 +433,6 @@ h1{
 
 p, h1, h2, h3, h4, h5, h6 {
     word-wrap: break-word;
-}
-body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
-    margin: 0;
 }
 
 .footer_copyright em{
