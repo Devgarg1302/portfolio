@@ -245,6 +245,11 @@ nav .ul button {
     position: relative;
 }
 
+.hero-avatar_image img {
+    clip-path: circle(70px at center);
+    object-fit: cover;
+}
+
 .hero-avatar .hero-avatar_image img {
     -webkit-clip-path: circle(70px at centre); 
     clip-path: circle(70px at centre);
@@ -252,6 +257,11 @@ nav .ul button {
     object-fit: cover;
     overflow-clip-margin: content-box;
     overflow: clip;
+}
+
+img, picture, video, canvas, svg, iframe, object {
+    max-width: 100%;
+    display: block;
 }
 
 .binary{
@@ -355,14 +365,12 @@ article>*+*{
     font-size: 2.5rem;
 }
 
-.content>*+*{
-    font-size: 1rem;
-}
 
 .content ul{
     font-size: 1.125rem;
     opacity: .8;
-    max-width: 71ch; 
+    max-width: 71ch;
+    margin-top: 1rem; 
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -400,4 +408,61 @@ h1{
     font-weight: bold;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+.footer{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #2c2c2c;
+    margin-top: 20px;
+
+}
+
+.footer .container3{
+    flex-wrap: wrap;
+    gap:1rem;
+    align-content: center;
+    justify-content: space-between;
+    --max-w: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 2rem);
+    max-width: var(--max-w);
+    display: flex;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+}
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+}
+
+.footer_copyright em{
+    margin-right: 0.25rem;
+    text-emphasis: initial;
+    font-style: normal;
+    font-weight: 600;
+}
+.footer_copyright span{
+    font-weight: 600;
+    opacity: .6;
+    color: hsl(0,0,85%);
+}
+
+.tech a{
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    color: hsl(187, 78%, 46%);
+}
+
+.tech svg{
+    display: inline-block;
+    width: 40px;
+}
+
+img, picture, video, canvas, svg, iframe, object{
+    max-width: 100%;
 }
