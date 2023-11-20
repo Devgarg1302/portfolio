@@ -59,7 +59,7 @@
                                 <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                             </svg>
                         </button>
-                        <a href="/articles" class="button button--outline button--icon button--rounded-full"
+                        <a href="/blog.html" class="button button--outline button--icon button--rounded-full"
                             title="See all articles">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" height="20"
                                 viewBox="0 0 24 24" role="presentation" stroke-width="1" stroke="white">
@@ -83,20 +83,19 @@
                                 small journey you’ll see how to mix colors by using the new <code>color-mix()</code> CSS
                                 function.</p>
                             <h2 id="new-colorspaces" tabindex="-1">
-                                 New Colorspaces</h2>
+                                New Colorspaces</h2>
                             <p>Before we introduce some of the new colorspaces, you may be wonder <strong>why</strong>
                                 do need more ways to create colors?</p>
                             <p>Having more or less colors comes down to human color perception and is subjective to how
                                 we see things on the screen. A low or wide range of colors it is going to be determined
                                 by the gamut of a display and coordinated via the chromaticity space diagram of a
-                                colorspace.</p><img data-v-49d58f36="" loading="lazy"
-                                data-src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/chromaticity.png?alt=media&amp;token=c3872c62-d992-4ae3-8a9a-2d59a01e3380&amp;_gl=1*18qf78h*_ga*MTI5ODQwMzU1Mi4xNjgyMzA0Mjk2*_ga_CW55HF8NVT*MTY5NjgwNzAwNS40LjEuMTY5NjgwNzAxNy40OC4wLjA."
-                                alt="" class="lozad contain" height="600" contain=""
-                                style="--fallback-bg: hsl(214, 9%, 55%);">
+                                colorspace.</p>
+                            <img loading="lazy" src="/articles/chromaticity.png" alt="" class="lozad contain"
+                                height="600" contain="" style="--fallback-bg: hsl(214, 9%, 55%);">
                             <blockquote>
                                 <p><em>Color space is a specific organization of colors. In combination with color
                                         profiling supported by various physical devices, it supports reproducible
-                                        representations of color</em> - <a data-v-cc29691a=""
+                                        representations of color</em> - <a
                                         href="https://en.wikipedia.org/wiki/Color_space" class="" target="_blank"
                                         rel="noopener noreferrer">Wikipedia</a></p>
                             </blockquote>
@@ -111,40 +110,38 @@
                                     Lightness</em>, <em>Chroma</em> and <em>Hue</em>. It allows for more precise control
                                 over the appearance of colors, especially when it comes to adjusting the lightness and
                                 saturation. More precise as per human perception.</p>
-                            <div data-v-b4c1a073="" class="box" style="--1e87097c: lch(50% 100 27); --7b681c42: 100;">
+                            <div class="box" style="--1e87097c: lch(50% 100 27); --7b681c42: 100;">
                                 <!---->
-                            </div><span data-v-b4c1a073="" style="--1e87097c: lch(50% 100 27); --7b681c42: 100;">lch(50%
+                            </div><span style="--1e87097c: lch(50% 100 27); --7b681c42: 100;">lch(50%
                                 100 27)</span>
                             <p><code>lab</code> - Stands for <em>Lightness</em>, <em>A</em> (green-red axis) and
                                 <em>B</em> (blue-yellow axis) channels. The A and B axis represent unique axes of human
                                 color vision in values between ±160.
                             </p>
-                            <div data-v-b4c1a073="" class="box" style="--1e87097c: lab(90 -60 -120); --7b681c42: 100;">
+                            <div class="box" style="--1e87097c: lab(90 -60 -120); --7b681c42: 100;">
                                 <!---->
-                            </div><span data-v-b4c1a073="" style="--1e87097c: lab(90 -60 -120); --7b681c42: 100;">lab(90
+                            </div><span style="--1e87097c: lab(90 -60 -120); --7b681c42: 100;">lab(90
                                 -60 -120)</span>
                             <p>Both <code>lch</code> and <code>lab</code> formats are expressed under the CIELAB color
                                 space. A rectangular colorspace built on axis around lightness that can range from 0% to
-                                100%.</p><img data-v-49d58f36="" loading="lazy"
-                                data-src="https://drafts.csswg.org/css-color-4/images/CH-plane-wheel.svg" alt=""
+                                100%.</p><img loading="lazy"
+                                src="/articles/CH-plane-wheel.png" alt=""
                                 class="lozad contain" style="--fallback-bg: hsl(214, 9%, 55%);">
                             <p><code>oklch</code> - Practically an improvement around <code>lch</code> with better
                                 chroma uniformity and linear lightness. You can essentialy use <code>oklch</code> where
                                 <code>lch</code> is being used. Checkout this awesome color picker by Evil Martians
                                 team: <a href="https://oklch.com/">https://oklch.com/</a>
                             </p>
-                            <div data-v-b4c1a073="" class="box"
-                                style="--1e87097c: oklch(60% 0.10 0.11); --7b681c42: 100;">
+                            <div class="box" style="--1e87097c: oklch(60% 0.10 0.11); --7b681c42: 100;">
                                 <!---->
-                            </div><span data-v-b4c1a073=""
-                                style="--1e87097c: oklch(60% 0.10 0.11); --7b681c42: 100;">oklch(60% 0.10 0.11)</span>
+                            </div><span style="--1e87097c: oklch(60% 0.10 0.11); --7b681c42: 100;">oklch(60% 0.10
+                                0.11)</span>
                             <p><code>oklab</code> - Corrective to LAB. It also improves linear lightness and hue
                                 uniformity compared to CIE LAB.</p>
-                            <div data-v-b4c1a073="" class="box"
-                                style="--1e87097c: oklab(60% 0.10 0.11); --7b681c42: 100;">
+                            <div class="box" style="--1e87097c: oklab(60% 0.10 0.11); --7b681c42: 100;">
                                 <!---->
-                            </div><span data-v-b4c1a073=""
-                                style="--1e87097c: oklab(60% 0.10 0.11); --7b681c42: 100;">oklab(60% 0.10 0.11)</span>
+                            </div><span style="--1e87097c: oklab(60% 0.10 0.11); --7b681c42: 100;">oklab(60% 0.10
+                                0.11)</span>
                             <p>Any CIE space colors (lch, oklch, lab, oklab) are capable of representing the entire
                                 human visible color spectrum, but we can also explicit create colors from a specific
                                 color gamut.</p>
@@ -154,393 +151,18 @@
                             <p>High-definition displays can have much more amount of colors than standard sRGB in
                                 <code>display-p3</code> and <code>Rec2020</code> colorspaces.
                             </p>
-                            <div data-v-b4c1a073="" class="box"
-                                style="--1e87097c: color(rec2020 .34 .58 .73); --7b681c42: 200;">
+                            <div class="box" style="--1e87097c: color(rec2020 .34 .58 .73); --7b681c42: 200;">
                                 <!---->
-                            </div><span data-v-b4c1a073=""
-                                style="--1e87097c: color(rec2020 .34 .58 .73); --7b681c42: 200;">color(rec2020 .34 .58
+                            </div><span style="--1e87097c: color(rec2020 .34 .58 .73); --7b681c42: 200;">color(rec2020
+                                .34 .58
                                 .73)</span>
                             <p>They can also be used to create perceptually consistent gradients:</p>
-                            <div data-v-b4c1a073="" class="box"
+                            <div class="box"
                                 style="--1e87097c: linear-gradient(to right, color(display-p3 34% 58% 73%), color(display-p3 50% 90% 50%)); --7b681c42: 200;">
                                 <!---->
-                            </div><span data-v-b4c1a073=""
+                            </div><span
                                 style="--1e87097c: linear-gradient(to right, color(display-p3 34% 58% 73%), color(display-p3 50% 90% 50%)); --7b681c42: 200;">linear-gradient(to
                                 right, color(display-p3 34% 58% 73%), color(display-p3 50% 90% 50%))</span>
-                            <h2 id="mixing-two-colors" tabindex="-1"><a class="header-anchor"
-                                    href="#mixing-two-colors"><span class="sr-only">Jump to heading</span><svg
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
-                                        </path>
-                                    </svg></a> Mixing two colors</h2>
-                            <p>Now that we have good grasp of these new color formats, let’s explore how we can mix them
-                                with <code>color-mix()</code>.</p>
-                            <p><code>color-mix()</code> is a CSS function that can take two colors and dynamically
-                                create adjusted color based on a mix of them in a given method (colorspace)</p>
-                            <p><code>color-mix(in &lt;colorspace&gt; | &lt;interpolation&gt;, &lt;color1&gt; &lt;n%&gt;, &lt;color2&gt; &lt;n%&gt;)</code>
-                            </p>
-                            <p>Where the values can be:</p>
-                            <ul>
-                                <li>Colorspaces: <code>srgb</code>, <code>srgb-linear</code>, <code>lab</code>,
-                                    <code>oklab</code>, <code>hsl</code>, <code>hwb</code>, <code>lch</code>,
-                                    <code>oklch</code>.
-                                </li>
-                                <li>Interpolation method: <code>shorter</code>, <code>longer</code>,
-                                    <code>increasing</code>, <code>decreasing</code>.
-                                </li>
-                                <li><code>&lt;n%&gt;</code>: Percentage amount from 0% to 100%. Default to 50%.</li>
-                            </ul>
-                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
-                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-function);">.mix</span><span style="color:var(--shiki-color-text);"> {</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">  --color</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">color-mix</span><span style="color:var(--shiki-token-constant);">(in srgb</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> yellow</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> red)</span><span style="color:var(--shiki-color-text);">;</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
-<span class="line"></span></code></pre>
-                            <div data-v-c0dc9116="" class="container"
-                                style="--left: yellow; --right: red; --9e4777b6: in srgb; --6b78fd6d: 50; --03fd1176: 50;">
-                                <svg data-v-c0dc9116="" width="300" height="100" viewBox="0 0 100 100">
-                                    <defs data-v-c0dc9116="">
-                                        <clipPath data-v-c0dc9116="" id="mask">
-                                            <circle data-v-c0dc9116="" r="50%" id="circle-right" cy="50%" cx="0%"
-                                                stroke-width="1" stroke="#000" fill="none"></circle>
-                                        </clipPath>
-                                    </defs>
-                                    <g data-v-c0dc9116="">
-                                        <circle data-v-c0dc9116="" id="center" r="50%" cy="50%" cx="-50"
-                                            fill="var(--mix)" clip-path="url(#mask)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-left" r="50%" cx="-50" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--left)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-right" r="50%" cx="0%" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--right)"></circle>
-                                    </g>
-                                    <circle data-v-c0dc9116="" title="Result mix" r="20%" cx="100%" cy="50%"
-                                        stroke-width="0" stroke="#000" fill="var(--result)"></circle>
-                                </svg>
-                                <div data-v-c0dc9116="" class="controls">
-                                    <div data-v-c0dc9116="" class="colorspace" style="display: none;"><span
-                                            data-v-c0dc9116="">in</span><select data-v-c0dc9116=""
-                                            aria-label="Select a color method">
-                                            <option value="lch">lch</option>
-                                            <option value="hsl">hsl</option>
-                                            <option value="lab">lab</option>
-                                            <option value="srgb">srgb</option>
-                                        </select></div>
-                                    <div data-v-c0dc9116="" class="range" style="display: none;"><span
-                                            data-v-c0dc9116="">L 50%</span><input data-v-9e8888b9="" data-v-c0dc9116=""
-                                            type="range" class="input-range"><span data-v-c0dc9116="">R 50%</span></div>
-                                </div>
-                            </div><img data-v-49d58f36="" loading="lazy"
-                                data-src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/computed-color.png?alt=media&amp;token=c8720727-c6a2-4d35-84b1-4c69a6ac9db6&amp;_gl=1*3hm15y*_ga*MTI5ODQwMzU1Mi4xNjgyMzA0Mjk2*_ga_CW55HF8NVT*MTY5Njc5NzA4Ni4zLjEuMTY5Njc5NzY4Mi40MS4wLjA."
-                                alt="" class="lozad contain" width="637" height="644"
-                                style="--fallback-bg: hsl(214, 9%, 55%);">
-                            <figcaption><i>(Final computed value of the color mix in DevTools)</i></figcaption>
-                            <h2 id="color-stops" tabindex="-1"><a class="header-anchor" href="#color-stops"><span
-                                        class="sr-only">Jump to heading</span><svg xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
-                                        </path>
-                                    </svg></a> Color stops</h2>
-                            <p>The following example mixes 60% of blue and 40% yellow in <code>lch</code>.</p>
-                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
-                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-function);">.mix</span><span style="color:var(--shiki-color-text);"> {</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">  --color</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">color-mix</span><span style="color:var(--shiki-token-constant);">(in lch</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> </span><span style="color:var(--shiki-token-function);">lch</span><span style="color:var(--shiki-token-constant);">(50 61 267) 60</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> </span><span style="color:var(--shiki-token-function);">lch</span><span style="color:var(--shiki-token-constant);">(81 95 80) 40</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);">)</span><span style="color:var(--shiki-color-text);">;</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
-<span class="line"></span></code></pre>
-                            <div data-v-c0dc9116="" class="container"
-                                style="--left: lch(50 61 267); --right: lch(81 95 80); --9e4777b6: in lch; --6b78fd6d: 60; --03fd1176: 40;">
-                                <svg data-v-c0dc9116="" width="300" height="100" viewBox="0 0 100 100">
-                                    <defs data-v-c0dc9116="">
-                                        <clipPath data-v-c0dc9116="" id="mask">
-                                            <circle data-v-c0dc9116="" r="50%" id="circle-right" cy="50%" cx="0%"
-                                                stroke-width="1" stroke="#000" fill="none"></circle>
-                                        </clipPath>
-                                    </defs>
-                                    <g data-v-c0dc9116="">
-                                        <circle data-v-c0dc9116="" id="center" r="50%" cy="50%" cx="-50"
-                                            fill="var(--mix)" clip-path="url(#mask)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-left" r="50%" cx="-50" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--left)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-right" r="50%" cx="0%" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--right)"></circle>
-                                    </g>
-                                    <circle data-v-c0dc9116="" title="Result mix" r="20%" cx="100%" cy="50%"
-                                        stroke-width="0" stroke="#000" fill="var(--result)"></circle>
-                                </svg>
-                                <div data-v-c0dc9116="" class="controls">
-                                    <div data-v-c0dc9116="" class="colorspace" style="display: none;"><span
-                                            data-v-c0dc9116="">in</span><select data-v-c0dc9116=""
-                                            aria-label="Select a color method">
-                                            <option value="lch">lch</option>
-                                            <option value="hsl">hsl</option>
-                                            <option value="lab">lab</option>
-                                            <option value="srgb">srgb</option>
-                                        </select></div>
-                                    <div data-v-c0dc9116="" class="range"><span data-v-c0dc9116="">L 60%</span><input
-                                            data-v-9e8888b9="" data-v-c0dc9116="" type="range" class="input-range"><span
-                                            data-v-c0dc9116="">R 40%</span></div>
-                                </div>
-                            </div>
-                            <h2 id="mixing-colorspaces" tabindex="-1"><a class="header-anchor"
-                                    href="#mixing-colorspaces"><span class="sr-only">Jump to heading</span><svg
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
-                                        </path>
-                                    </svg></a> Mixing colorspaces</h2>
-                            <p>You can mix color from different methods. Color interpolation can be from any of the
-                                colorspaces metioned like hsl to lch, lab to oklab, and the color-algorithm will do the
-                                calculation to interpolate them to a proximum value.</p>
-                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
-                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-function);">.mix</span><span style="color:var(--shiki-color-text);"> {</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">  --color</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">color-mix</span><span style="color:var(--shiki-token-constant);">(in hsl</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> </span><span style="color:var(--shiki-token-function);">hsl</span><span style="color:var(--shiki-token-constant);">(0 50</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);"> 50</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);">)</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> #7acedd)</span><span style="color:var(--shiki-color-text);">;</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
-<span class="line"></span></code></pre>
-                            <div data-v-c0dc9116="" class="container"
-                                style="--left: hsl(0 50% 50%); --right: #7acedd; --9e4777b6: in hsl; --6b78fd6d: 50; --03fd1176: 50;">
-                                <svg data-v-c0dc9116="" width="300" height="100" viewBox="0 0 100 100">
-                                    <defs data-v-c0dc9116="">
-                                        <clipPath data-v-c0dc9116="" id="mask">
-                                            <circle data-v-c0dc9116="" r="50%" id="circle-right" cy="50%" cx="0%"
-                                                stroke-width="1" stroke="#000" fill="none"></circle>
-                                        </clipPath>
-                                    </defs>
-                                    <g data-v-c0dc9116="">
-                                        <circle data-v-c0dc9116="" id="center" r="50%" cy="50%" cx="-50"
-                                            fill="var(--mix)" clip-path="url(#mask)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-left" r="50%" cx="-50" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--left)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-right" r="50%" cx="0%" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--right)"></circle>
-                                    </g>
-                                    <circle data-v-c0dc9116="" title="Result mix" r="20%" cx="100%" cy="50%"
-                                        stroke-width="0" stroke="#000" fill="var(--result)"></circle>
-                                </svg>
-                                <div data-v-c0dc9116="" class="controls">
-                                    <div data-v-c0dc9116="" class="colorspace"><span data-v-c0dc9116="">in</span><select
-                                            data-v-c0dc9116="" aria-label="Select a color method">
-                                            <option value="lch">lch</option>
-                                            <option value="hsl">hsl</option>
-                                            <option value="lab">lab</option>
-                                            <option value="srgb">srgb</option>
-                                        </select></div>
-                                    <div data-v-c0dc9116="" class="range" style="display: none;"><span
-                                            data-v-c0dc9116="">L 50%</span><input data-v-9e8888b9="" data-v-c0dc9116=""
-                                            type="range" class="input-range"><span data-v-c0dc9116="">R 50%</span></div>
-                                </div>
-                            </div>
-                            <p>Notice the suttle different tones of purple when switching between colorspaces. Behind
-                                the scenes both colors are converted to the given colorspace. Some methods may have a
-                                wide range of colors than others, thus represeting a distinct mixed color.</p>
-                            <h2 id="alpha" tabindex="-1"><a class="header-anchor" href="#alpha"><span
-                                        class="sr-only">Jump to heading</span><svg xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
-                                        </path>
-                                    </svg></a> Alpha</h2>
-                            <p>There is a significant change when using alpha colors where colors have their components
-                                (chroma, lightness, hue) converted to rgb channels and premultiplied with three alpha
-                                values, one for each channel (red, green and blue).</p>
-                            <p>Follow the example below where mixes 50% opaque red with 90% opaque green. Since the
-                                amount of both colors are ommited, the are both at 50%.</p>
-                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
-                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-function);">.mix</span><span style="color:var(--shiki-color-text);"> {</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">  --color</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">color-mix</span><span style="color:var(--shiki-token-constant);">(in lab</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> </span><span style="color:var(--shiki-token-function);">lab</span><span style="color:var(--shiki-token-constant);">(49 72.05 57.68 / 0.5)</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> </span><span style="color:var(--shiki-token-function);">lab</span><span style="color:var(--shiki-token-constant);">(84 -74.11 75.76 / 0.9))</span><span style="color:var(--shiki-color-text);">;</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
-<span class="line"></span></code></pre>
-                            <div data-v-c0dc9116="" class="container"
-                                style="--left: lab(49 72.05 57.68 / 0.5); --right: lab(84 -74.11 75.76 / 0.9); --9e4777b6: in lab; --6b78fd6d: 50; --03fd1176: 50;">
-                                <svg data-v-c0dc9116="" width="300" height="100" viewBox="0 0 100 100">
-                                    <defs data-v-c0dc9116="">
-                                        <clipPath data-v-c0dc9116="" id="mask">
-                                            <circle data-v-c0dc9116="" r="50%" id="circle-right" cy="50%" cx="0%"
-                                                stroke-width="1" stroke="#000" fill="none"></circle>
-                                        </clipPath>
-                                    </defs>
-                                    <g data-v-c0dc9116="">
-                                        <circle data-v-c0dc9116="" id="center" r="50%" cy="50%" cx="-50"
-                                            fill="var(--mix)" clip-path="url(#mask)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-left" r="50%" cx="-50" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--left)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-right" r="50%" cx="0%" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--right)"></circle>
-                                    </g>
-                                    <circle data-v-c0dc9116="" title="Result mix" r="20%" cx="100%" cy="50%"
-                                        stroke-width="0" stroke="#000" fill="var(--result)"></circle>
-                                </svg>
-                                <div data-v-c0dc9116="" class="controls">
-                                    <div data-v-c0dc9116="" class="colorspace"><span data-v-c0dc9116="">in</span><select
-                                            data-v-c0dc9116="" aria-label="Select a color method">
-                                            <option value="lch">lch</option>
-                                            <option value="hsl">hsl</option>
-                                            <option value="lab">lab</option>
-                                            <option value="srgb">srgb</option>
-                                        </select></div>
-                                    <div data-v-c0dc9116="" class="range"><span data-v-c0dc9116="">L 50%</span><input
-                                            data-v-9e8888b9="" data-v-c0dc9116="" type="range" class="input-range"><span
-                                            data-v-c0dc9116="">R 50%</span></div>
-                                </div>
-                            </div>
-                            <p>Where the final computed color will be:
-                                <code>color(srgb 0.936942 0.916944 0.0808208 / 0.7)</code>
-                            </p>
-                            <p>You can dive in the details of the calculation on the spec <a
-                                    href="https://drafts.csswg.org/css-color-5/#color-mix-with-alpha">here</a>.</p>
-                            <h3 id="hue-inporlation" tabindex="-1"><a class="header-anchor"
-                                    href="#hue-inporlation"><span class="sr-only">Jump to heading</span><svg
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
-                                        </path>
-                                    </svg></a> Hue inporlation</h3>
-                            <p>Finally, we can also tweak colors to short of wider angles of the color wheel.</p>
-                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
-                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-comment);">/* Mixing with blue and white in short angle */</span></span>
-<span class="line"><span style="color:var(--shiki-token-function);">.mix</span><span style="color:var(--shiki-color-text);"> {</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">  --color</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">color-mix</span><span style="color:var(--shiki-token-constant);">(in hsl shorter hue</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> </span><span style="color:var(--shiki-token-function);">hsl</span><span style="color:var(--shiki-token-constant);">(240 100</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);"> 50</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);">)</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> </span><span style="color:var(--shiki-token-function);">hsl</span><span style="color:var(--shiki-token-constant);">(0 100</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);"> 100</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);">))</span><span style="color:var(--shiki-color-text);">;</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
-<span class="line"></span></code></pre>
-                            <div data-v-c0dc9116="" class="container"
-                                style="--left: hsl(240 100% 50%); --right: hsl(0 100% 100%); --9e4777b6: in hsl shorter hue; --6b78fd6d: 50; --03fd1176: 50;">
-                                <svg data-v-c0dc9116="" width="300" height="100" viewBox="0 0 100 100">
-                                    <defs data-v-c0dc9116="">
-                                        <clipPath data-v-c0dc9116="" id="mask">
-                                            <circle data-v-c0dc9116="" r="50%" id="circle-right" cy="50%" cx="0%"
-                                                stroke-width="1" stroke="#000" fill="none"></circle>
-                                        </clipPath>
-                                    </defs>
-                                    <g data-v-c0dc9116="">
-                                        <circle data-v-c0dc9116="" id="center" r="50%" cy="50%" cx="-50"
-                                            fill="var(--mix)" clip-path="url(#mask)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-left" r="50%" cx="-50" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--left)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-right" r="50%" cx="0%" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--right)"></circle>
-                                    </g>
-                                    <circle data-v-c0dc9116="" title="Result mix" r="20%" cx="100%" cy="50%"
-                                        stroke-width="0" stroke="#000" fill="var(--result)"></circle>
-                                </svg>
-                                <div data-v-c0dc9116="" class="controls">
-                                    <div data-v-c0dc9116="" class="colorspace" style="display: none;"><span
-                                            data-v-c0dc9116="">in</span><select data-v-c0dc9116=""
-                                            aria-label="Select a color method">
-                                            <option value="lch">lch</option>
-                                            <option value="hsl">hsl</option>
-                                            <option value="lab">lab</option>
-                                            <option value="srgb">srgb</option>
-                                        </select></div>
-                                    <div data-v-c0dc9116="" class="range" style="display: none;"><span
-                                            data-v-c0dc9116="">L 50%</span><input data-v-9e8888b9="" data-v-c0dc9116=""
-                                            type="range" class="input-range"><span data-v-c0dc9116="">R 50%</span></div>
-                                </div>
-                            </div>
-                            <p>Previously, every example were mixing by connecting two hue values in a straight line.
-                                This is interesting because by opting for a longer route we’re able to get more vibrant
-                                hues in the result.</p>
-                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
-                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-comment);">/* Mixing with blue and white in a longer angle */</span></span>
-<span class="line"><span style="color:var(--shiki-token-function);">.mix</span><span style="color:var(--shiki-color-text);"> {</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">  --color</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">color-mix</span><span style="color:var(--shiki-token-constant);">(in hsl longer hue</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> </span><span style="color:var(--shiki-token-function);">hsl</span><span style="color:var(--shiki-token-constant);">(240 100</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);"> 50</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);">)</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-token-constant);"> </span><span style="color:var(--shiki-token-function);">hsl</span><span style="color:var(--shiki-token-constant);">(0 100</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);"> 100</span><span style="color:var(--shiki-token-keyword);">%</span><span style="color:var(--shiki-token-constant);">))</span><span style="color:var(--shiki-color-text);">;</span></span>
-<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
-<span class="line"></span></code></pre>
-                            <div data-v-c0dc9116="" class="container"
-                                style="--left: hsl(240 100% 50%); --right: hsl(0 100% 100%); --9e4777b6: in hsl longer hue; --6b78fd6d: 50; --03fd1176: 50;">
-                                <svg data-v-c0dc9116="" width="300" height="100" viewBox="0 0 100 100">
-                                    <defs data-v-c0dc9116="">
-                                        <clipPath data-v-c0dc9116="" id="mask">
-                                            <circle data-v-c0dc9116="" r="50%" id="circle-right" cy="50%" cx="0%"
-                                                stroke-width="1" stroke="#000" fill="none"></circle>
-                                        </clipPath>
-                                    </defs>
-                                    <g data-v-c0dc9116="">
-                                        <circle data-v-c0dc9116="" id="center" r="50%" cy="50%" cx="-50"
-                                            fill="var(--mix)" clip-path="url(#mask)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-left" r="50%" cx="-50" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--left)"></circle>
-                                        <circle data-v-c0dc9116="" id="circle-right" r="50%" cx="0%" cy="50%"
-                                            stroke-width="0" stroke="#000" fill="var(--right)"></circle>
-                                    </g>
-                                    <circle data-v-c0dc9116="" title="Result mix" r="20%" cx="100%" cy="50%"
-                                        stroke-width="0" stroke="#000" fill="var(--result)"></circle>
-                                </svg>
-                                <div data-v-c0dc9116="" class="controls">
-                                    <div data-v-c0dc9116="" class="colorspace" style="display: none;"><span
-                                            data-v-c0dc9116="">in</span><select data-v-c0dc9116=""
-                                            aria-label="Select a color method">
-                                            <option value="lch">lch</option>
-                                            <option value="hsl">hsl</option>
-                                            <option value="lab">lab</option>
-                                            <option value="srgb">srgb</option>
-                                        </select></div>
-                                    <div data-v-c0dc9116="" class="range" style="display: none;"><span
-                                            data-v-c0dc9116="">L 50%</span><input data-v-9e8888b9="" data-v-c0dc9116=""
-                                            type="range" class="input-range"><span data-v-c0dc9116="">R 50%</span></div>
-                                </div>
-                            </div>
-                            <p>This is especially useful to create gradients without having “dead zones” in the middle.
-                            </p>
-                            <p>Shorter:</p>
-                            <div data-v-b4c1a073="" class="box" style="--1e87097c: linear-gradient(
-  to right in lch shorter hue, 
-  lch(41 80 290), 
-  lch(81 104 150)
-); --7b681c42: 200;">
-                                <!---->
-                            </div><span data-v-b4c1a073="" style="--1e87097c: linear-gradient(
-  to right in lch shorter hue, 
-  lch(41 80 290), 
-  lch(81 104 150)
-); --7b681c42: 200;">
-                                linear-gradient(
-                                to right in lch shorter hue,
-                                lch(41 80 290),
-                                lch(81 104 150)
-                                )</span>
-                            <p>Longer:</p>
-                            <div data-v-b4c1a073="" class="box" style="--1e87097c: linear-gradient(
-  to right in lch longer hue, 
-  lch(41 80 290), 
-  lch(81 104 150)
-); --7b681c42: 200;">
-                                <!---->
-                            </div><span data-v-b4c1a073="" style="--1e87097c: linear-gradient(
-  to right in lch longer hue, 
-  lch(41 80 290), 
-  lch(81 104 150)
-); --7b681c42: 200;">
-                                linear-gradient(
-                                to right in lch longer hue,
-                                lch(41 80 290),
-                                lch(81 104 150)
-                                )</span>
-                            <p>Whether if there is any “best” or go-to colorspace to use it all depends what you’re
-                                trying to achieve, accuracy and how much support you’re expecting from user’s devices.
-                                Test each one and see what you like the most!</p>
-                            <h2 id="further-reading" tabindex="-1"><a class="header-anchor"
-                                    href="#further-reading"><span class="sr-only">Jump to heading</span><svg
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
-                                        </path>
-                                    </svg></a> Further Reading</h2>
-                            <ul>
-                                <li><a data-v-cc29691a="" href="https://drafts.csswg.org/css-color-5/#color-mix"
-                                        class="" target="_blank" rel="noopener noreferrer">Color Mix spec</a></li>
-                                <li><a data-v-cc29691a="" href="https://drafts.csswg.org/css-color/#predefined" class=""
-                                        target="_blank" rel="noopener noreferrer">Colorspaces spec</a></li>
-                                <li><a data-v-cc29691a="" href="https://css-tricks.com/nerds-guide-color-web/" class=""
-                                        target="_blank" rel="noopener noreferrer">A Nerd’s Guide to Color on the Web</a>
-                                </li>
-                                <li><a data-v-cc29691a=""
-                                        href="https://developer.chrome.com/articles/high-definition-css-color-guide/#hwb"
-                                        class="" target="_blank" rel="noopener noreferrer">High Definition CSS Color
-                                        Guide</a></li>
-                            </ul>
                         </div>
                     </div>
                 </section>
