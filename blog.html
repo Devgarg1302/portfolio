@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="header.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -20,10 +22,10 @@
             <nav>
                 <div class="container">
                     <div class="ul">
-                        <button class="btn" onclick="location.href = 'blog.html'">Blog</button>
-                        <button class="btn" onclick="location.href = 'about.html'">About</button>
-                        <button class="btn" onclick="location.href = 'projects.html'">Projects</button>
-                        <button class="btn" onclick="location.href = 'contact.html'">Contact Me</button>
+                        <button class="btn" onclick=redirectToPage1()>Blog</button>
+                        <button class="btn" onclick=redirectToPage2()>About</button>
+                        <button class="btn" onclick=redirectToPage3()>Projects</button>
+                        <button class="btn" onclick=redirectToPage4()>Contact Me</button>
                     </div>
 
                     <div class="resume"><button class="resume-button"
@@ -51,17 +53,17 @@
                             <section class="segment">
                                 <h2 class="year">2023</h2>
                                 <div class="posts">
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>April 13</time>
+                                    <a href="/articles/mixcss.html" class="post">
+                                        <h3>Mixing colors in CSS</h3>
+                                        <time>Oct 09</time>
+                                    </a>
+                                    <a href="/articles/cascade.html" class="post">
+                                        <h3>Organise your CSS with Cascade Layers</h3>
+                                        <time>Nov 16</time>
                                     </a>
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Feb 24</time>
-                                    </a>
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jan 7</time>
+                                        <h3>Component Driven UI Patterns Part II</h3>
+                                        <time>Nov 26</time>
                                     </a>
                                 </div>
                             </section>
@@ -69,26 +71,21 @@
                                 <h2 class="year">2022</h2>
                                 <div class="posts">
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
+                                        <h3>Component Driven UI Patterns Part I</h3>
                                         <time>Nov 14</time>
                                     </a>
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
+                                        <h3>DVWA Attacks Performing</h3>
                                         <time>Sep 25</time>
                                     </a>
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
+                                        <h3>Virtual Machine Hacking</h3>
                                         <time>Jun 18</time>
                                     </a>
 
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jun 18</time>
-                                    </a>
-
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jun 18</time>
+                                        <h3>JavaScript Basics</h3>
+                                        <time>May 10</time>
                                     </a>
                                 </div>
                             </section>
@@ -96,68 +93,31 @@
                                 <h2 class="year">2021</h2>
                                 <div class="posts">
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Feb 13</time>
+                                        <h3>Working with sockets</h3>
+                                        <time>Nov 13</time>
                                     </a>
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Feb 13</time>
+                                        <h3>Python Basics</h3>
+                                        <time>Sep 25</time>
                                     </a>
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Feb 13</time>
-                                    </a>
-
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jun 18</time>
+                                        <h3>Basics of Machine Learning</h3>
+                                        <time>July 7</time>
                                     </a>
 
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jun 18</time>
+                                        <h3>Working with Cisco Packet Tracer</h3>
+                                        <time>April 18</time>
                                     </a>
 
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jun 18</time>
-                                    </a>
-                                </div>
-                            </section>
-                            <section class="segment">
-                                <h2 class="year">2020</h2>
-                                <div class="posts">
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Feb 13</time>
-                                    </a>
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Feb 13</time>
-                                    </a>
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Feb 13</time>
+                                        <h3>Blood Donation Database Management System</h3>
+                                        <time>Feb 15</time>
                                     </a>
 
                                     <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jun 18</time>
-                                    </a>
-
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jun 18</time>
-                                    </a>
-
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jun 18</time>
-                                    </a>
-
-                                    <a href="" class="post">
-                                        <h3>Using react</h3>
-                                        <time>Jun 18</time>
+                                        <h3>Working with Kali Linux</h3>
+                                        <time>Jan 5</time>
                                     </a>
                                 </div>
                             </section>
@@ -168,32 +128,32 @@
                                     <h2>Categories</h2>
                                     <div class="list">
                                         <a href="" class="category">
-                                            <div class="name">Javascript</div>
-                                            <div class="count">3</div>
+                                            <div class="name">Html</div>
+                                            <div class="count">2</div>
                                         </a>
                                         <a href="" class="category">
                                             <div class="name">Javascript</div>
                                             <div class="count">3</div>
                                         </a>
                                         <a href="" class="category">
-                                            <div class="name">Javascript</div>
+                                            <div class="name">Socket</div>
+                                            <div class="count">1</div>
+                                        </a>
+                                        <a href="" class="category">
+                                            <div class="name">Hacking</div>
                                             <div class="count">3</div>
                                         </a>
                                         <a href="" class="category">
-                                            <div class="name">Javascript</div>
-                                            <div class="count">3</div>
+                                            <div class="name">Software</div>
+                                            <div class="count">2</div>
                                         </a>
                                         <a href="" class="category">
-                                            <div class="name">Javascript</div>
-                                            <div class="count">3</div>
+                                            <div class="name">Linux</div>
+                                            <div class="count">4</div>
                                         </a>
                                         <a href="" class="category">
-                                            <div class="name">Javascript</div>
-                                            <div class="count">3</div>
-                                        </a>
-                                        <a href="" class="category">
-                                            <div class="name">Javascript</div>
-                                            <div class="count">3</div>
+                                            <div class="name">Machine Learning</div>
+                                            <div class="count">2</div>
                                         </a>
                                     </div>
                                 </div>

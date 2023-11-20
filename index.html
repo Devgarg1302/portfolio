@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="icons.css">
+    <link rel="stylesheet" href="header.css">
+    <script src="index.js"></script>
 </head>
 
 <body dark-theme="dark">
@@ -20,10 +24,10 @@
             <nav>
                 <div class="container">
                     <div class="ul">
-                        <button class="btn" onclick="location.href = 'Blog.html'">Blog</button>
-                        <button class="btn" onclick="location.href = 'about.html'">About</button>
-                        <button class="btn" onclick="location.href = 'projects.html'">Projects</button>
-                        <button class="btn" onclick="location.href = 'contact.html'">Contact Me</button>
+                        <button class="btn" onclick=redirectToPage1()>Blog</button>
+                        <button class="btn" onclick=redirectToPage2()>About</button>
+                        <button class="btn" onclick=scrollToSection1()>Projects</button>
+                        <button class="btn" onclick=scrollToSection2()>Contact Me</button>
                     </div>
 
                     <div class="resume"><button class="resume-button"
@@ -38,6 +42,7 @@
                     <h1 class="hero_headline">I'm Dev Garg</h1>
                     <p class="hero_description"> Software Engineer that crafts things for the Web, heavy focused on
                         front-end development enthusiastic and fascinated on UI design ✨</p>
+                    <div class="auto-input">I'm <span class="auto-input1"></span></div>
                     <div class="social_media"></div>
                 </div>
                 <aside class="hero-aside">
@@ -84,7 +89,7 @@
                 </article>
                 <a href="/blog.html" class="resume-button1">View All</a>
             </div>
-            <section class="projects-grid container">
+            <section class="projects-grid container" id="projects">
                 <h3>Projects</h3>
                 <div class="project-card">
                     <figure class="project-thumbnail">
@@ -191,7 +196,95 @@
                     </div>
                 </div>
             </section>
-            <section class="testimonials container"></section>
+            <section class="contact container" id="contact">
+                <h3>Get in touch!</h3>
+                <form class="form">
+                    <div class="flex">
+                        <label>
+                            <input class="input" type="text" placeholder="" required="">
+                            <span>first name</span>
+                        </label>
+                        <label>
+                            <input class="input" type="text" placeholder="" required="">
+                            <span>last name</span>
+                        </label>
+                    </div>
+                    <label>
+                        <input class="input" type="email" placeholder="" required="">
+                        <span>email</span>
+                    </label>
+                    <label>
+                        <input class="input" placeholder="" type="tel" required="">
+                        <span>contact number</span>
+                    </label>
+                    <label>
+                        <textarea class="input01" placeholder="" rows="3" required=""></textarea>
+                        <span>message</span>
+                    </label>
+                    <button href="#" class="fancy">
+                        <span class="top-key"></span>
+                        <span class="text">submit</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </button>
+                </form>
+            </section>
+            <section class="social-media container">
+                <button class="Btn">
+                    <div class="sign"><svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px"
+                            viewBox="0 -0.5 24 24" id="meteor-icon-kit__regular-github" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.2047 0.00001C6.56031 -0.005731 1.74628 4.08615 0.842541 9.6577C-0.061195 15.2293 3.2126 20.6331 8.56941 22.4118C9.14823 22.5177 9.35294 22.1577 9.35294 21.8541C9.35294 21.5506 9.35294 20.8588 9.35294 19.8988C6.14117 20.5977 5.46353 18.3529 5.46353 18.3529C5.25046 17.6572 4.79779 17.0595 4.18588 16.6659C3.14823 15.96 4.27059 15.96 4.27059 15.96C5.00761 16.0641 5.65578 16.5014 6.02823 17.1459C6.34368 17.7179 6.87393 18.1406 7.50179 18.3208C8.12965 18.5009 8.8034 18.4236 9.37411 18.1059C9.41842 17.5252 9.66876 16.9794 10.08 16.5671C7.5247 16.2777 4.84235 15.2894 4.84235 10.92C4.82481 9.7786 5.24688 8.67412 6.02117 7.8353C5.67632 6.84285 5.71662 5.7571 6.13412 4.79295C6.13412 4.79295 7.10117 4.48236 9.29647 5.97177C11.1816 5.45419 13.1713 5.45419 15.0565 5.97177C17.2518 4.48236 18.2118 4.79295 18.2118 4.79295C18.6351 5.74689 18.6854 6.82486 18.3529 7.81412C19.1272 8.65294 19.5493 9.7574 19.5318 10.8988C19.5318 15.3177 16.8424 16.2847 14.28 16.5459C14.8359 17.1047 15.1218 17.8774 15.0635 18.6635C15.0635 20.2024 15.0635 21.4447 15.0635 21.8188C15.0635 22.1929 15.2682 22.4824 15.8541 22.3694C21.1473 20.5447 24.3569 15.1728 23.4554 9.6469C22.5539 4.1211 17.8034 0.04779 12.2047 0.00001z"
+                                fill="#758CA3" />
+                        </svg></div>
+
+                    <div class="media-icon">Github</div>
+                </button>
+                <button class="Btn">
+                    <div class="sign"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="800px" height="800px" viewBox="0 -2 44 44" version="1.1">
+
+                            <title>LinkedIn-color</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+
+                            </defs>
+                            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Color-" transform="translate(-702.000000, -265.000000)" fill="#007EBB">
+                                    <path
+                                        d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
+                                        id="LinkedIn">
+
+                                    </path>
+                                </g>
+                            </g>
+                        </svg></div>
+
+                    <div class="media-icon">LinkdIn</div>
+                </button>
+                <button class="Btn">
+                    <div class="sign"><svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px"
+                            viewBox="0 0 24 24" id="meteor-icon-kit__solid-instagram" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.9962 0.0078125C8.73824 0.0078125 8.32971 0.021622 7.05019 0.080003C5.77333 0.138241 4.90129 0.341051 4.13824 0.637622C3.34938 0.944146 2.68038 1.35434 2.01343 2.02124C1.34652 2.68819 0.936333 3.35719 0.629809 4.14605C0.333238 4.9091 0.130429 5.78115 0.0721905 7.058C0.0138095 8.33753 0 8.74605 0 12.0041C0 15.262 0.0138095 15.6705 0.0721905 16.9501C0.130429 18.2269 0.333238 19.099 0.629809 19.862C0.936333 20.6509 1.34652 21.3199 2.01343 21.9868C2.68038 22.6537 3.34938 23.0639 4.13824 23.3705C4.90129 23.667 5.77333 23.8698 7.05019 23.9281C8.32971 23.9864 8.73824 24.0002 11.9962 24.0002C15.2542 24.0002 15.6627 23.9864 16.9422 23.9281C18.2191 23.8698 19.0911 23.667 19.8542 23.3705C20.643 23.0639 21.312 22.6537 21.979 21.9868C22.6459 21.3199 23.0561 20.6509 23.3627 19.862C23.6592 19.099 23.862 18.2269 23.9202 16.9501C23.9786 15.6705 23.9924 15.262 23.9924 12.0041C23.9924 8.74605 23.9786 8.33753 23.9202 7.058C23.862 5.78115 23.6592 4.9091 23.3627 4.14605C23.0561 3.35719 22.6459 2.68819 21.979 2.02124C21.312 1.35434 20.643 0.944146 19.8542 0.637622C19.0911 0.341051 18.2191 0.138241 16.9422 0.080003C15.6627 0.021622 15.2542 0.0078125 11.9962 0.0078125ZM7.99748 12.0041C7.99748 14.2125 9.78776 16.0028 11.9962 16.0028C14.2047 16.0028 15.995 14.2125 15.995 12.0041C15.995 9.79557 14.2047 8.00529 11.9962 8.00529C9.78776 8.00529 7.99748 9.79557 7.99748 12.0041ZM5.836 12.0041C5.836 8.60181 8.594 5.84381 11.9962 5.84381C15.3984 5.84381 18.1564 8.60181 18.1564 12.0041C18.1564 15.4062 15.3984 18.1642 11.9962 18.1642C8.594 18.1642 5.836 15.4062 5.836 12.0041ZM18.3998 7.03996C19.1949 7.03996 19.8394 6.39548 19.8394 5.60043C19.8394 4.80538 19.1949 4.16086 18.3998 4.16086C17.6048 4.16086 16.9603 4.80538 16.9603 5.60043C16.9603 6.39548 17.6048 7.03996 18.3998 7.03996Z"
+                                fill="#758CA3" />
+                        </svg></div>
+
+                    <div class="media-icon">Instagram</div>
+                </button>
+                <button class="Btn">
+                    <div class="sign"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="leetcode">
+                        <path fill="#B3B1B0"
+                            d="M22 14.355c0-.742-.564-1.346-1.26-1.346H10.676c-.696 0-1.26.604-1.26 1.346s.563 1.346 1.26 1.346H20.74c.696.001 1.26-.603 1.26-1.346z" />
+                        <path fill="#E7A41F"
+                            d="m3.482 18.187 4.313 4.361c.973.979 2.318 1.452 3.803 1.452 1.485 0 2.83-.512 3.805-1.494l2.588-2.637c.51-.514.492-1.365-.039-1.9-.531-.535-1.375-.553-1.884-.039l-2.676 2.607c-.462.467-1.102.662-1.809.662s-1.346-.195-1.81-.662l-4.298-4.363c-.463-.467-.696-1.15-.696-1.863 0-.713.233-1.357.696-1.824l4.285-4.38c.463-.467 1.116-.645 1.822-.645s1.346.195 1.809.662l2.676 2.606c.51.515 1.354.497 1.885-.038.531-.536.549-1.387.039-1.901l-2.588-2.636a4.994 4.994 0 0 0-2.392-1.33l-.034-.007 2.447-2.503c.512-.514.494-1.366-.037-1.901-.531-.535-1.376-.552-1.887-.038l-10.018 10.1C2.509 11.458 2 12.813 2 14.311c0 1.498.509 2.896 1.482 3.876z" />
+                        <path fill="#070706"
+                            d="M8.115 22.814a2.109 2.109 0 0 1-.474-.361c-1.327-1.333-2.66-2.66-3.984-3.997-1.989-2.008-2.302-4.937-.786-7.32a6 6 0 0 1 .839-1.004L13.333.489c.625-.626 1.498-.652 2.079-.067.56.563.527 1.455-.078 2.066-.769.776-1.539 1.55-2.309 2.325-.041.122-.14.2-.225.287-.863.876-1.75 1.729-2.601 2.618-.111.116-.262.186-.372.305-1.423 1.423-2.863 2.83-4.266 4.272-1.135 1.167-1.097 2.938.068 4.127 1.308 1.336 2.639 2.65 3.961 3.974.067.067.136.132.204.198.468.303.474 1.25.183 1.671-.321.465-.74.75-1.333.728-.199-.006-.363-.086-.529-.179z" />
+                    </svg></div>
+
+                    <div class="media-icon">LeetCode</div>
+                </button>
+            </section>
         </main>
         <footer class="footer">
             <div class="container3">
@@ -202,6 +295,16 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+      let typed = new Typed(".auto-input1", {
+        strings: ["CSS Devloper","Gamer", "Python Developer", "Blogger"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+      })
+    </script>
 </body>
 
 </html>
