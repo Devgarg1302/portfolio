@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="/articles/article.css">
+    <link rel="stylesheet" href="cascade.css">
 </head>
 
 <body>
@@ -25,17 +27,213 @@
                         <button class="btn" onclick="location.href = 'contact.html'">Contact Me</button>
                     </div>
 
-                    <div class="resume"><button class="resume-button" onclick="location.href='/resume/Resume.pdf'">Resume</button></div>
+                    <div class="resume"><button class="resume-button"
+                            onclick="location.href='/resume/Resume.pdf'">Resume</button></div>
                 </div>
             </nav>
         </header>
-        
+
+        <main class="main-content">
+            <div class="back"></div>
+            <article class="article">
+                <div class="article-heading">
+                    <h1>Organise your CSS with Cascade Layers</h1>
+                    <div class="article-info">
+                        <time datetime="2023-10-08T23:31:01.858Z">
+                            Nov 16,2023
+                        </time>
+                        <div class="tags">
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <section class="container article-grid">
+                    <div class="article-controls">
+                        <button class="button button--outline button--icon button--rounded-full" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <title>Share</title>
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </button>
+                        <a href="/blog.html" class="button button--outline button--icon button--rounded-full"
+                            title="See all articles">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" height="20"
+                                viewBox="0 0 24 24" role="presentation" stroke-width="1" stroke="white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="article-body">
+                        <div class="prose article-body-content">
+                            <p>Did you ever have a hard time trying to override a CSS of an element? We got this
+                                beautify website where we were happy by adding simple selectors and structuring our
+                                stylesheets until the team or the product owner decided crank up the site to include
+                                widgets, surveys and a bunch of third-party tools.</p>
+                            <p>Suddenly, our design doesn’t fit anymore, and updating those third-party styles becomes a
+                                battle of selector’s <em>specificity</em> and <code>!important</code> uses. I think
+                                we’re all been there at some point.</p>
+                            <p>Thankfully enough, CSS has got some amazing new features recently, being one of them:
+                                <em>Cascade layers</em>
+                            </p>
+                            <h2 id="what-is-cascade%3F" tabindex="-1">
+                                What is Cascade?
+                            </h2>
+                            <p><i>“The CSS Cascade is the way our browsers resolve competing CSS declarations.”</i></p>
+                            <p>In other words, it is what determines which styles get apply to an element. The cascade
+                                is the algorithm for solving conflicts where multiple CSS rules or declarations apply to
+                                an HTML element. It is about conflict resolution.</p>
+                                <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);" tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-string-expression);">h1</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">font-size</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">18</span><span style="color:var(--shiki-token-keyword);">px</span><span style="color:var(--shiki-color-text);">;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-comment);">/* vs */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-function);">.title</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">font-size</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">24</span><span style="color:var(--shiki-token-keyword);">px</span><span style="color:var(--shiki-color-text);">;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
+<span class="line"></span></code></pre>
+                            <p>But to decide which one gets used we need to understand the steps of the Cascade:</p>
+                            <h3 id="order-of-appearance" tabindex="-1"> Order of appearance</h3>
+                            <p>Order of appearance refers to the <strong>order</strong> where the rules are defined, and
+                                how they appear is taken into consideration by the cascade. A rule is a combination of a
+                                selector + block of declarations.</p>
+                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
+                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-comment);">/* </span></span>
+<span class="line"><span style="color:var(--shiki-token-comment);">Selector: .component</span></span>
+<span class="line"><span style="color:var(--shiki-token-comment);">Property: background-color</span></span>
+<span class="line"><span style="color:var(--shiki-token-comment);">Declaration: background-color: slateblue;</span></span>
+<span class="line"><span style="color:var(--shiki-token-comment);">Rule: .component { background-color: slateblue } </span></span>
+<span class="line"><span style="color:var(--shiki-token-comment);">*/</span></span>
+<span class="line"></span></code></pre>
+                            <p>From CSS rules, declarations to <code>&lt;style&gt;</code> or
+                                <code>&lt;link rel='stylesheet'&gt;</code> tags, they’re more likely to end up in the
+                                final cascade the further down they are.
+                            </p>
+                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
+                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-comment);">/* main.css */</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression);">h1</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">color</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">green</span><span style="color:var(--shiki-color-text);">; </span><span style="color:var(--shiki-token-comment);">/* this declaration gets overwritten */</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
+<span class="line"></span></code></pre>
+                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
+                                tabindex="0"><code class="language-html"><span class="line"><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">head</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  &lt;</span><span style="color:var(--shiki-token-string-expression);">link</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">rel</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">"stylesheet"</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">href</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">"main.css"</span><span style="color:var(--shiki-color-text);"> /&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  &lt;</span><span style="color:var(--shiki-token-string-expression);">style</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-string-expression);">h1</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);"></span><span style="color:var(--shiki-token-constant);">color</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">red</span><span style="color:var(--shiki-color-text);">; </span><span style="color:var(--shiki-token-comment);">/* by this one */</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">    }</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  &lt;/</span><span style="color:var(--shiki-token-string-expression);">style</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">&lt;/</span><span style="color:var(--shiki-token-string-expression);">head</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">body</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  &lt;</span><span style="color:var(--shiki-token-string-expression);">h1</span><span style="color:var(--shiki-color-text);">&gt;hello world&lt;/</span><span style="color:var(--shiki-token-string-expression);">h1</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">&lt;/</span><span style="color:var(--shiki-token-string-expression);">body</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"></span></code></pre>
+                            <h3 id="specificity" tabindex="-1"> Specificity</h3>
+                            <p>Specificity is an algorithm used to determine which CSS selector is most
+                                <strong>specific</strong>. That is, it decides which style is stronger in terms of
+                                weight compared to other selectors that apply to the <strong>same element</strong>.
+                            </p>
+                            <p>The specificity weight can be expressed as a group of three elements from highest to
+                                lowest: (A, B, C)</p>
+                            <ul>
+                                <li>A: IDs</li>
+                                <li>B: Classes, Pseudo-classes and attributes</li>
+                                <li>C: Elements, Pseudo-elements</li>
+                            </ul>
+                            <p>Given any CSS selector like:</p>
+                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
+                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">[</span><span style="color:var(--shiki-token-function);">type</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">'button'</span><span style="color:var(--shiki-color-text);">] {}</span></span>
+<span class="line"></span></code></pre>
+                            <p>You can intuitively calculate as: (0, 1, 1)</p>
+                            <p>Then, compare to another selector for the same element:</p>
+                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
+                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-comment);">/* (1, 1, 0) */</span></span>
+<span class="line"><span style="color:var(--shiki-token-function);">.button#get-started</span><span style="color:var(--shiki-color-text);"> {}</span></span>
+<span class="line"></span></code></pre>
+                            <p>Given these scores for this example, the last selector gets applied. It is like a game
+                                the one with the higher points in specificity <strong>wins</strong>.</p>
+                            <h3 id="origin" tabindex="-1">Origin</h3>
+                            <p>When we talk about the origin of CSS, we’re talking about exactly <strong>where</strong>
+                                these styles come from.</p>
+                            <p>CSS rules can be defined in many places or referenced in different stylesheets, such as:
+                            </p>
+                            <ul>
+                                <li>User-agent: Default browser styles;</li>
+                                <li>Local user: Operating system-based or application preferences styles;</li>
+                                <li>Author: <strong>Your</strong> styles;</li>
+                            </ul><img loading="lazy"
+                                data-src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/Screenshot%202023-07-23%20224938.png?alt=media&amp;token=6362659a-10ba-4419-9a36-329612d8a182"
+                                alt="User agent styles" class="lozad contain" width="870" height="360"
+                                style="--fallback-bg: hsl(214, 9%, 55%);"
+                                src="https://firebasestorage.googleapis.com/v0/b/portfolio-d3c7c.appspot.com/o/Screenshot%202023-07-23%20224938.png?alt=media&amp;token=6362659a-10ba-4419-9a36-329612d8a182"
+                                data-loaded="true">
+                            <h3 id="importance" tabindex="-1">Importance</h3>
+                            <p>Importance isn’t there to simply increase power — but to balance the power between
+                                various competing concerns. It is about in which <strong>circumstances</strong> our
+                                styles get applied.</p>
+                            <p>This includes:</p>
+                            <ul>
+                                <li>Transitions</li>
+                                <li>Animations</li>
+                                <li><code>!important</code></li>
+                            </ul>
+                            <p>Both animation and transition properties are designed to have a higher
+                                <strong>priority</strong> to define the current styles of an element. For instance, a
+                                <code>fadeIn</code> animation can manipulate the visibility of an element since the
+                                current and final opacity value will override its value by default<sup>*</sup>.
+                            </p>
+                            <p>On the other hand, the <code>!important</code> flag is the one that will override all
+                                other selectors regardless of their weight in specificity. It is like a signal that we
+                                want our declaration to be higher in the Cascade.</p>
+                            <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
+                                tabindex="0"><code class="language-css"><span class="line"><span style="color:var(--shiki-token-comment);">/* wins */</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">border</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">none </span><span style="color:var(--shiki-token-keyword);">!important</span><span style="color:var(--shiki-color-text);">;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-comment);">/* does not matter order or specifity */</span></span>
+<span class="line"><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-token-function);">#my#highly.specific</span><span style="color:var(--shiki-color-text);">[</span><span style="color:var(--shiki-token-function);">data-selector</span><span style="color:var(--shiki-color-text);">] {</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-constant);">border</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">1</span><span style="color:var(--shiki-token-keyword);">px</span><span style="color:var(--shiki-token-constant);"> solid green</span><span style="color:var(--shiki-color-text);">;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">}</span></span>
+<span class="line"></span></code></pre>
+                            <blockquote>
+                                <h4>*What about inline styles?</h4>
+                                <p>Inline styles are styles added via the html <code>style</code> attribute that will
+                                    override pretty much all other CSS declarations unless <code>!important</code> is
+                                    defined. You can express their specificity weight as 1-0-0-0.</p>
+                                <pre class="shiki css-variables" style="background-color:var(--shiki-color-background);"
+                                    tabindex="0"><code class="language-html"><span class="line"><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">style</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-string-expression);">body</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-constant);">display</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">block</span><span style="color:var(--shiki-color-text);">;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">  }</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">&lt;/</span><span style="color:var(--shiki-token-string-expression);">style</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--shiki-token-comment);">&lt;!-- button will be hidden --&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">style</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">"display: none;"</span><span style="color:var(--shiki-color-text);">&gt;&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">&gt;</span></span>
+<span class="line"></span></code></pre>
+                            </blockquote>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+
         <footer class="footer">
             <div class="container3">
                 <p class="footer_copyright">
                     <em>Made by Dev</em>
-                    <span>@2023 - Present | All rights reserved.</span></p>
-            </div>    
+                    <span>@2023 - Present | All rights reserved.</span>
+                </p>
+            </div>
         </footer>
     </div>
 </body>
