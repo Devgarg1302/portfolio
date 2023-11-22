@@ -101,6 +101,10 @@ body {
   .form label .input:valid + span {
     color: green;
   }
+
+  .input-error {
+    color: red;
+  }
   
   .input01 {
     width: 100%;

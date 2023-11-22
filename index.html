@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="resume"><button class="resume-button"
-                            onclick="location.href='/resume/Resume.pdf'">Resume</button></div>
+                            onclick=resume()>Resume</button></div>
                 </div>
             </nav>
         </header>
@@ -201,20 +201,20 @@
                 <form class="form">
                     <div class="flex">
                         <label>
-                            <input class="input" type="text" placeholder="" required="">
+                            <input id="firstName" name="fname" class="input" type="text" required="">
                             <span>first name</span>
                         </label>
                         <label>
-                            <input class="input" type="text" placeholder="" required="">
+                            <input id="lastName" class="input" type="text" required="">
                             <span>last name</span>
                         </label>
                     </div>
                     <label>
-                        <input class="input" type="email" placeholder="" required="">
+                        <input id="email" class="input" type="email" required="">
                         <span>email</span>
                     </label>
                     <label>
-                        <input class="input" placeholder="" type="tel" required="">
+                        <input id="contact" class="input" type="tel" required="">
                         <span>contact number</span>
                     </label>
                     <label>
@@ -230,7 +230,7 @@
                 </form>
             </section>
             <section class="social-media container">
-                <button class="Btn">
+                <button class="Btn" onclick=github()>
                     <div class="sign"><svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px"
                             viewBox="0 -0.5 24 24" id="meteor-icon-kit__regular-github" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -240,7 +240,7 @@
 
                     <div class="media-icon">Github</div>
                 </button>
-                <button class="Btn">
+                <button class="Btn" onclick=linkdin()>
                     <div class="sign"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             width="800px" height="800px" viewBox="0 -2 44 44" version="1.1">
 
@@ -262,7 +262,7 @@
 
                     <div class="media-icon">LinkdIn</div>
                 </button>
-                <button class="Btn">
+                <button class="Btn" onclick=instagram()>
                     <div class="sign"><svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px"
                             viewBox="0 0 24 24" id="meteor-icon-kit__solid-instagram" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -272,7 +272,7 @@
 
                     <div class="media-icon">Instagram</div>
                 </button>
-                <button class="Btn">
+                <button class="Btn" onclick=leetcode()>
                     <div class="sign"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="leetcode">
                         <path fill="#B3B1B0"
                             d="M22 14.355c0-.742-.564-1.346-1.26-1.346H10.676c-.696 0-1.26.604-1.26 1.346s.563 1.346 1.26 1.346H20.74c.696.001 1.26-.603 1.26-1.346z" />

@@ -85,6 +85,7 @@
 
 .button--rounded-full.button--icon {
     justify-content: center;
+    cursor: pointer;
 }
 
 .button--rounded-full {
