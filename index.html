@@ -198,30 +198,30 @@
             </section>
             <section class="contact container" id="contact">
                 <h3>Get in touch!</h3>
-                <form class="form">
+                <form class="form" id="demo" action="http://localhost:3000/submit-form" method="POST" >
                     <div class="flex">
                         <label>
-                            <input id="firstName" name="fname" class="input" type="text" required="">
+                            <input id="firstName" name="firstName" class="input" type="text" required="">
                             <span>first name</span>
                         </label>
                         <label>
-                            <input id="lastName" class="input" type="text" required="">
+                            <input id="lastName" name="lastName" class="input" type="text" required="">
                             <span>last name</span>
                         </label>
                     </div>
                     <label>
-                        <input id="email" class="input" type="email" required="">
+                        <input id="email" name="email" class="input" type="email" required="">
                         <span>email</span>
                     </label>
                     <label>
-                        <input id="contact" class="input" type="tel" required="">
+                        <input id="contact" name="phone" class="input" type="tel" required="">
                         <span>contact number</span>
                     </label>
                     <label>
-                        <textarea class="input01" placeholder="" rows="3" required=""></textarea>
+                        <textarea class="input01" name="message" placeholder="" rows="3" required=""></textarea>
                         <span>message</span>
                     </label>
-                    <button href="#" class="fancy">
+                    <button type="submit" class="fancy">
                         <span class="top-key"></span>
                         <span class="text">submit</span>
                         <span class="bottom-key-1"></span>
