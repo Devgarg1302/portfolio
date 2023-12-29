@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -35,11 +36,11 @@ app.post('/submit-form', async (req, res) => {
   try {
     // Create a new FormData document with the submitted data
     const formData = new FormData({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        phone: req.body.phone,
-        message: req.body.message,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      phone: req.body.phone,
+      message: req.body.message,
     });
 
     // Save the document to MongoDB
@@ -52,7 +53,8 @@ app.post('/submit-form', async (req, res) => {
   }
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+
+  // Start the server
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
