@@ -46,7 +46,7 @@ module.exports = async (req, res) => {
     
 
     // Save the document to MongoDB
-    await formData.save();
+    await submitForm(formData);
 
     res.status(200).send('Form submitted successfully!');
   } catch (err) {
