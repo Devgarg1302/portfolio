@@ -23,7 +23,7 @@ function instagram() {
 }
 
 function resume(){
-    window.open('/resume/resume.pdf')
+    document.open("https://drive.google.com/file/d/1t08XoXbpMaXfsGEMOpGIkbyzJgqmiSgr/preview" ,width="640" ,height="480" ,allow="autoplay")
 }
 
 function scrollToSection1() {
