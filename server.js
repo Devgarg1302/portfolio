@@ -33,8 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define a route for handling form submissions
 app.post('/submit-form', async (req, res) => {
-  try {
-    // Create a new FormData document with the submitted data
+  if(req.method === 'POST') {
     const formData = new FormData({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -42,6 +41,9 @@ app.post('/submit-form', async (req, res) => {
       phone: req.body.phone,
       message: req.body.message,
     });
+  try {
+    // Create a new FormData document with the submitted data
+    
 
     // Save the document to MongoDB
     await formData.save();
@@ -51,6 +53,7 @@ app.post('/submit-form', async (req, res) => {
     console.error('Error submitting form:', err);
     res.status(500).send('Internal Server Error');
   }
+}
 });
 
 
