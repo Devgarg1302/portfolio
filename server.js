@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define a route for handling form submissions
-app.post('/submit-form', async (req, res) => {
+module.exports = async (req, res) => {
   if(req.method === 'POST') {
     const formData = new FormData({
       firstName: req.body.firstName,
@@ -54,7 +54,7 @@ app.post('/submit-form', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 }
-});
+};
 
 
   // Start the server
