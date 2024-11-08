@@ -23,7 +23,7 @@ function instagram() {
 }
 
 function resume(){
-    document.open("https://drive.google.com/file/d/1t08XoXbpMaXfsGEMOpGIkbyzJgqmiSgr/preview" ,width="640" ,height="480" ,allow="autoplay")
+    document.open("https://drive.google.com/file/d/16W5zPq5OIxxOePy6AicF5Vg-bbKNyikp/view?usp=sharing" ,width="640" ,height="480" ,allow="autoplay")
 }
 
 function scrollToSection1() {
