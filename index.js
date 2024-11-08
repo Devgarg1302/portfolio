@@ -1,9 +1,9 @@
 function redirectToPage1() {
-    window.location.href = '/portfolio/blog.html';
+    window.location.href = '/blog.html';
 }
 
 function redirectToPage2() {
-    window.location.href = '/portfolio/about.html';
+    window.location.href = '/about.html';
 }
 
 function github() {
